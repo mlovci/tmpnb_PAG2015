@@ -1,0 +1,30 @@
+{
+    "name": "mm10",
+    "title": "Metadata about genes and splicing events",
+    "licences": null,
+    "datapackage_version": "0.1.0",
+    "sources": "Gencode and ENSEMBL genes",
+    "resources": [{
+        "url": "http://sauron.ucsd.edu/flotilla_projects/mm10/gencode.vM2.annotation.gene.attributes.json",
+        "name": "expression_feature_data",
+        "format": "json"
+    }, 
+    {
+        "url": "http://sauron.ucsd.edu/flotilla_projects/mm10/ERCC_Controls_Analysis.txt",
+        "name": "spikein_feature_data",
+        "format": "tsv"
+    },
+	{
+	 "format":"csv",
+	 "url":"http://sauron.ucsd.edu/flotilla_projects/mm10/miso_metadata_gencode_m2.csv",
+	 "name":"splicing_feature_data",
+	 "feature_rename_col" : "gene_name"
+	},
+      {
+         "format":"tsv",
+         "url":"http://sauron.ucsd.edu/flotilla_projects/mm10/ens_to_go.txt.gz",
+         "name":"gene_ontology_data",
+         "compression" : "gzip"
+      }
+    ]
+}
