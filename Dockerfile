@@ -8,5 +8,5 @@ USER root
 RUN echo "c.ZMQTerminalInteractiveShell.kernel_timeout = 600" >> ~/.ipython/profile_default/ipython_console_config.py
 ADD https://s3-us-west-2.amazonaws.com/flotilla-projects/flotilla_projects_pag2015.zip /home/jovyan/flotilla_projects/flotilla_projects_pag2015.zip
 RUN cd /home/jovyan/flotilla_projects && unzip flotilla_projects_pag2015.zip && ln -s flotilla_projects/* .
-RUN find . | xargs chown -R jovyan && find . | xargs chgrp -R jovyan
+RUN find . -type f -print0 |xargs -0  chown -R jovyan && find . -type f -print0 |xargs -0  chgrp -R jovyan
 USER jovyan
