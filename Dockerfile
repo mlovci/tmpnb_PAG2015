@@ -5,7 +5,6 @@ ADD Acknowledgements.ipynb /home/jovyan/Acknowledgements.ipynb
 ADD examples /home/jovyan/examples
 ADD img /home/jovyan/img
 USER root
-RUN apt-get install -y curl
 ADD https://s3-us-west-2.amazonaws.com/flotilla-projects/flotilla_projects_pag2015.zip /home/jovyan/flotilla_projects/flotilla_projects_pag2015.zip
 RUN cd /home/jovyan/flotilla_projects && unzip flotilla_projects_pag2015.zip \
  && ln -s flotilla_projects/* . && cd /home/jovyan && find . -print0 \
